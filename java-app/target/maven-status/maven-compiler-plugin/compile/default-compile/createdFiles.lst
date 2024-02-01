@@ -3,7 +3,7 @@ utils/performance_metrics/ExtractFCP.class
 utils/errors/ExtractErrors.class
 utils/performance_metrics/ExtractLCP.class
 utils/performance_metrics/ExtractSI.class
-app.class
+App.class
 utils/performance_metrics/ExtractTTI.class
 utils/performance_metrics/ExtractCLS.class
 utils/performance_metrics/ExtractPS.class
