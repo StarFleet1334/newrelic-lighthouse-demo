@@ -7,19 +7,17 @@ sudo npm install -g lighthouse
 # Source the .env file to load the environment variables
 source .env
 
-mvn clean package
-
-
-# Run Lighthouse audit and save the report in JSON format
+# Run Lighthouse audit and save the report in JSON format at the root of the java-app folder
 /usr/local/bin/lighthouse $LIGHTHOUSE_URL --output=json --output-path=./lighthouse_report.json
-# if everything good instead of full path use prometheus
 
-# shellcheck disable=SC2164
+## Move the Lighthouse report to the target directory
 
-# shellcheck disable=SC2164
+mvn package
+
+mv ./lighthouse_report.json ./target/lighthouse_report.json
+
+# Go to the target directory
 cd ./target
 
 # To run the app with instrumentation:
 java -javaagent:./newrelic/newrelic.jar -jar newrelic-lighthouse-1.0-SNAPSHOT.jar
-
-
