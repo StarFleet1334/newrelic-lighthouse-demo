@@ -1,0 +1,15 @@
+# Step 1:
+# docker build -t selenium-chrome .
+
+
+# Step 2:
+# docker run -d -p 4444:4444 --platform linux/amd64 --shm-size="2g" selenium-chrome
+
+# --shm-size="2g" sets the shared memory size (useful for Chrome to avoid crashes).
+# -p 4444:4444 maps port 4444 of the container to port 4444 on your host system.
+#-d runs the container in detached mode, meaning it runs in the background.
+
+# Step 3: (if you want to check)
+
+# docker ps
+# This command lists all running containers.

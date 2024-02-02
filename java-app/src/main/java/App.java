@@ -37,6 +37,8 @@ public class App {
             res.type("application/json");
             String jsonResponse = "{\"message\": \"Hello, World!\"}";
 
+            // Sending Logs
+
             List<String> errors = extractErrors.extractErrors();
             List<String> additional_information_about_errors = extractErrors.getExtraInformationAboutErrors();
             for (String error : errors) {
@@ -45,6 +47,9 @@ public class App {
             for (String additionalInformationAboutError : additional_information_about_errors) {
                 logger.warning(additionalInformationAboutError);
             }
+
+
+            // Sending Metrices
 
             return jsonResponse;
         });
