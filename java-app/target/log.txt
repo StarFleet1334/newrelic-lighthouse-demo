@@ -1,6 +1,4 @@
-Feb 02, 2024 5:53:33 AM App lambda$main$0
-WARNING: Description: Failed to load resource: net::ERR_CONNECTION_RESET, Source URL: https://zeechoog.net/5/5305293/?oo=1&aab=1, Line: 0, Column: 0, Source: network
-Feb 02, 2024 5:53:33 AM App lambda$main$0
-WARNING: Description: Failed to load resource: net::ERR_CONNECTION_RESET, Source URL: https://zeechoog.net/tag.min.js, Line: 0, Column: 0, Source: network
-Feb 02, 2024 5:53:33 AM App lambda$main$0
-WARNING: duration: 8.71, entryType: measure, name: lh:audit:errors-in-console, startTime: 14250.95
+Feb 03, 2024 4:45:58 PM App lambda$main$0
+WARNING: duration: 7.98, entryType: measure, name: lh:audit:errors-in-console, startTime: 11227.4
+Feb 03, 2024 4:46:00 PM App lambda$main$0
+WARNING: duration: 7.98, entryType: measure, name: lh:audit:errors-in-console, startTime: 11227.4

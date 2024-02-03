@@ -1,16 +1,44 @@
-const { Builder, By, Key, until } = require('selenium-webdriver');
+const { Builder, By, Key, until } = require("selenium-webdriver");
+const assert = require("assert");
 
 (async function example() {
-    let driver = await new Builder()
-        .forBrowser('chrome')
-        .usingServer('http://localhost:4444/wd/hub')
-        .withCapabilities({ 'google:chromeOptions': { 'args': ['--no-sandbox'] } })
-        .build();
+    let driver;
     try {
-        await driver.get('http://www.google.com/');
-        await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
-        await driver.wait(until.titleIs('webdriver - Google Search'), 1000);
+        driver = await new Builder()
+            .forBrowser("chrome")
+            .build();
+
+        await driver.get('https://one.eu.newrelic.com/');
+
+        // Wait for a certain amount of time (e.g., 30 seconds)
+        await driver.sleep(5000); // Sleep for 30,000 milliseconds = 30 seconds
+
+        // Typing Email
+        await driver.findElement(By.id("login_email")).sendKeys("ilataria@solvd.com");
+
+        await driver.sleep(5000); // Sleep for 30,000 milliseconds = 30 seconds
+
+        await driver.findElement(By.id("login_submit")).click()
+
+        await driver.findElement(By.id("login_password")).sendKeys("Iliko20022005");
+
+        await driver.sleep(5000); // Sleep for 30,000 milliseconds = 30 seconds
+
+        await driver.findElement(By.id("login_submit")).click()
+
+        await driver.sleep(5000); // Sleep for 30,000 milliseconds = 30 seconds
+
+
+
+
+
+
+
+    } catch (error) {
+        console.error('Error occurred:', error);
     } finally {
-        await driver.quit();
+        if (driver) {
+            await driver.quit(); // This will still close the browser after the sleep
+        }
     }
 })();
