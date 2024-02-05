@@ -78,6 +78,21 @@
             <artifactId>webdrivermanager</artifactId>
             <version>5.1.0</version> <!-- Make sure this is the latest version -->
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.slack.api/slack-api-client -->
+        <dependency>
+            <groupId>com.slack.api</groupId>
+            <artifactId>slack-api-client</artifactId>
+            <version>1.8.1</version> <!-- Use the latest version available -->
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.github.cdimascio/java-dotenv -->
+        <dependency>
+            <groupId>io.github.cdimascio</groupId>
+            <artifactId>java-dotenv</artifactId>
+            <version>5.2.2</version> <!-- Use the latest version available -->
+        </dependency>
+
     </dependencies>
 
     <build>
