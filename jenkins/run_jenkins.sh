@@ -9,6 +9,10 @@ CONTAINER_NAME="my-jenkins-container"
 # Port on your machine that will forward to Jenkins
 HOST_PORT=8080
 
+# Jenkins username and token/password
+JENKINS_USER="admin"
+JENKINS_TOKEN="11a09cbd2126a90ea85fbd1245e26f3f5c"  # Use an actual API token in a real scenario
+
 # Build the Docker image
 docker build -t $IMAGE_NAME .
 
@@ -17,9 +21,25 @@ docker run -d --name $CONTAINER_NAME -p $HOST_PORT:8080 -p 50000:50000 $IMAGE_NA
 
 echo "Jenkins should be available at http://localhost:$HOST_PORT"
 
-echo "Waiting Jenkins to start"
-sleep 15
+# Wait for Jenkins to fully start
+sleep 20  # Adjust this based on your Jenkins setup
 
+# Path to your beta.xml file
+CONFIG_XML_PATH="./jobs/beta.xml"
 
+# Jenkins URL
+JENKINS_URL="http://localhost:$HOST_PORT"
 
+# Job Name
+JOB_NAME="random-job"
 
+# Create the Jenkins job
+curl -X POST -H "Content-Type: application/xml" --data-binary "@$CONFIG_XML_PATH" "$JENKINS_URL/createItem?name=$JOB_NAME" --user $JENKINS_USER:$JENKINS_TOKEN
+
+echo "Job $JOB_NAME should be created"
+
+# Trigger the job
+curl -X POST "$JENKINS_URL/job/$JOB_NAME/build" \
+     --user $JENKINS_USER:$JENKINS_TOKEN
+
+echo "Job $JOB_NAME should be triggered"
