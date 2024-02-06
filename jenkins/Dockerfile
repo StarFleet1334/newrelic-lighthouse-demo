@@ -10,9 +10,10 @@ COPY security.groovy /usr/share/jenkins/ref/init.groovy.d/security.groovy
 
 
 # Use jenkins-plugin-cli to install plugins
-RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/ref/plugins.txt
-
-
+RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/ref/plugins.txt && \
+    apt-get -y update && \
+    apt-get -y install sudo && \
+    apt-get -y install jq
 # Expose the default port for Jenkins
 EXPOSE 8080
 
