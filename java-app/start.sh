@@ -19,8 +19,7 @@ npx lighthouse $LIGHTHOUSE_URL --output=json --output-path=./lighthouse_report.j
 # Check if Maven is installed, install if not
 if ! command -v mvn > /dev/null; then
     echo "Maven is not installed. Installing Maven..."
-    # Add your Maven installation command here. For example, for Ubuntu it might be:
-    apt-get install -y maven
+
 fi
 
 
