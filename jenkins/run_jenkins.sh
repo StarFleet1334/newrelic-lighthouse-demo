@@ -11,7 +11,7 @@ HOST_PORT=8080
 
 # Jenkins username and token/password
 JENKINS_USER="admin"
-JENKINS_TOKEN="11a3f2e7bd33026be44af11250728aa85a"  # Use an actual API token in a real scenario
+JENKINS_TOKEN="116aac9ce29ad0a8c1a672fbf9b6f7e1f7"  # Use an actual API token in a real scenario
 
 # Build the Docker image
 docker build -t $IMAGE_NAME .
