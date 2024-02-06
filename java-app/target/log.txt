@@ -1,4 +1,2 @@
-Feb 03, 2024 4:45:58 PM App lambda$main$0
-WARNING: duration: 7.98, entryType: measure, name: lh:audit:errors-in-console, startTime: 11227.4
-Feb 03, 2024 4:46:00 PM App lambda$main$0
-WARNING: duration: 7.98, entryType: measure, name: lh:audit:errors-in-console, startTime: 11227.4
+Feb 06, 2024 11:06:54 PM App main
+WARNING: duration: 0.96, entryType: measure, name: lh:audit:errors-in-console, startTime: 15533.46

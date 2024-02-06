@@ -4,6 +4,7 @@ utils/errors/ExtractErrors.class
 utils/performance_metrics/ExtractLCP.class
 utils/performance_metrics/ExtractSI.class
 App.class
+slack_notifier/SlackNotifier.class
 utils/performance_metrics/ExtractTTI.class
 utils/performance_metrics/ExtractCLS.class
 utils/performance_metrics/ExtractPS.class

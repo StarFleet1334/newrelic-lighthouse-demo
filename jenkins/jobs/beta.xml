@@ -3,7 +3,8 @@
     <builders>
         <hudson.tasks.Shell>
             <command>
-                cd  /var/jenkins_home &amp;&amp;
+                # Clone the repository and start the Java app
+                cd /var/jenkins_home &amp;&amp;
                 git clone https://github.com/StarFleet1334/newrelic-lighthouse-demo.git &amp;&amp;
                 cd newrelic-lighthouse-demo/java-app &amp;&amp;
                 sh start.sh
@@ -13,4 +14,3 @@
     <publishers/>
     <buildWrappers/>
 </project>
-
