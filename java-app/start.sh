@@ -1,7 +1,8 @@
 #!/bin/bash
 
+
 # Set up Lighthouse
-sudo npm install -g lighthouse
+npm install -g lighthouse
 # if permission denied, use sudo
 
 # Source the .env file to load the environment variables
