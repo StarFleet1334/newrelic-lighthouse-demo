@@ -1,2 +1,0 @@
-Feb 06, 2024 11:06:54 PM App main
-WARNING: duration: 0.96, entryType: measure, name: lh:audit:errors-in-console, startTime: 15533.46

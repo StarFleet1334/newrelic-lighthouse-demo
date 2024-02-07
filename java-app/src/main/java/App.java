@@ -44,9 +44,11 @@ public class App {
             List<String> errors = extractErrors.extractErrors();
             List<String> additional_information_about_errors = extractErrors.getExtraInformationAboutErrors();
             for (String error : errors) {
+                System.out.println(error);
                 logger.warning(error);
             }
             for (String additionalInformationAboutError : additional_information_about_errors) {
+                System.out.println(additionalInformationAboutError);
                 logger.warning(additionalInformationAboutError);
             }
 //

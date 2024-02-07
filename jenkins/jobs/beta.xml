@@ -7,7 +7,7 @@
                 cd /var/jenkins_home &amp;&amp;
                 git clone https://github.com/StarFleet1334/newrelic-lighthouse-demo.git &amp;&amp;
                 cd newrelic-lighthouse-demo/java-app &amp;&amp;
-                sh start.sh
+                sh pre_start.sh
             </command>
         </hudson.tasks.Shell>
     </builders>
