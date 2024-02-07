@@ -13,3 +13,6 @@ gatling:latest
 build-user-vars-plugin:latest
 maven-plugin:latest
 pipeline-model-definition:latest
+job-dsl:latest
+configuration-as-code:latest
+workflow-aggregator:latest

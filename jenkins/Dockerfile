@@ -3,10 +3,14 @@ FROM jenkins/jenkins:lts
 # Set environment variables
 ENV JENKINS_HOME /var/jenkins_home
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
+ENV CASC_JENKINS_CONFIG /var/jenkins_home/casc_configs
 
-# Copy plugins.txt
+# Copy necessary files
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 COPY security.groovy /usr/share/jenkins/ref/init.groovy.d/security.groovy
+COPY create-jobs.groovy /usr/share/jenkins/ref/init.groovy.d/create-jobs.groovy
+COPY jenkins.yaml /var/jenkins_home/casc_configs/jenkins.yaml
+COPY job-dsl-scripts /var/jenkins_home/job-dsl-scripts
 
 USER root
 
