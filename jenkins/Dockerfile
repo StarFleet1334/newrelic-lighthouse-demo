@@ -1,5 +1,8 @@
 FROM jenkins/jenkins:lts
 
+USER root
+
+
 # Set environment variables
 ENV JENKINS_HOME /var/jenkins_home
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
@@ -12,10 +15,11 @@ COPY create-jobs.groovy /usr/share/jenkins/ref/init.groovy.d/create-jobs.groovy
 COPY jenkins.yaml /var/jenkins_home/casc_configs/jenkins.yaml
 COPY job-dsl-scripts /var/jenkins_home/job-dsl-scripts
 
-USER root
 
 # Use jenkins-plugin-cli to install plugins
 RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/ref/plugins.txt
+RUN apt-get update && apt-get install -y bash
+
 
 # Expose the default port for Jenkins
 EXPOSE 8080

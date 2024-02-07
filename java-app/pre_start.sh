@@ -11,7 +11,7 @@ npm install  lighthouse
 
 source .env
 
-npx lighthouse $LIGHTHOUSE_URL --output=json --output-path=./lighthouse_report.json
+npx lighthouse $LIGHTHOUSE_URL --output=json --output-path=./lighthouse_report.json --chrome-flags="--no-sandbox"
 
 docker-compose build --no-cache
 
